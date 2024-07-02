@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Cor
+from core.models import Marca
 
-class CorMarSerializer(ModelSerializer):
+class MarcaSerializer(ModelSerializer):
     class Meta:
-        model = Cor
+        model = Marca
         fields = "__filds__"
