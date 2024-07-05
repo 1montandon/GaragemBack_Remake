@@ -2,7 +2,7 @@ from rest_framework.serializers import ModelSerializer
 
 from core.models import Cor
 
-class CorMarSerializer(ModelSerializer):
+class CorSerializer(ModelSerializer):
     class Meta:
         model = Cor
-        fields = "__filds__"
+        fields = "__all__"
