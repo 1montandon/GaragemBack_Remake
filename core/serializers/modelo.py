@@ -5,4 +5,4 @@ from core.models import Modelo
 class ModeloSerializer(ModelSerializer):
     class Meta:
         model = Modelo
-        fields = "__filds__"
+        fields = "__all__"

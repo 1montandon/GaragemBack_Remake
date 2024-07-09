@@ -5,4 +5,4 @@ from core.models import Veiculo
 class VeiculoSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = "__filds__"
+        fields = "__all__"
