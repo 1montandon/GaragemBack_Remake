@@ -8,7 +8,7 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 from django.db import models
-
+from django.contrib.auth.models import Group
 
 class UserManager(BaseUserManager):
     """Manager for users."""
@@ -41,10 +41,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     passage_id = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255, unique=True)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, null=True, blank=True, default="nome")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-
+    
     objects = UserManager()
 
     USERNAME_FIELD = "email"
@@ -53,5 +53,5 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         """Meta options for the model."""
 
-        verbose_name = "Usuário"
+        verbose_name = "Usuário"    
         verbose_name_plural = "Usuários"
